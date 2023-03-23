@@ -1,25 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Products from './Products/Products'
+import Components from './TodoApp/Components';
+import TodoList from './TodoApp/TodoList';
 function App() {
+  const data =  {
+    title : "Todo Application",
+    description:"Bekleyen Görevler",
+    items:['Görev 1', 'Görev 2', 'Görev 3', 'Görev 4']
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+      <Products/>
+      <TodoList data={data}/>
+      <Components data={data}/>
 
+    </>
+  )
+};
 export default App;
